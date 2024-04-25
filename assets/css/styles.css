@@ -326,12 +326,16 @@ img {
 }
 .contact__button {
   display: block;
-  border: none;
-  outline: none;
-  font-size: var(--normal-font-size);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--first-color);
+  color: black;
   cursor: pointer;
-  margin-left: auto;
+  font-weight: var(--font-semi);
+  transition: 0.3s;
 }
+
 
 /* ===== FOOTER =====*/
 .footer {
@@ -340,22 +344,28 @@ img {
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
-}
-.footer__title {
-  font-size: 2rem;
-  margin-bottom: var(--mb-4);
+  position: relative; /* Ensure positioning context */
+  z-index: 1; /* Ensure footer links are above other content */
 }
 .footer__social {
   margin-bottom: var(--mb-4);
+  position: relative; /* Ensure positioning context */
+  z-index: 1; /* Ensure footer links are above other content */
 }
 .footer__icon {
   font-size: 1.5rem;
   color: white;
   margin: 0 var(--mb-2);
 }
+.footer__icon:hover {
+  color: var(--first-color);
+}
 .footer__copy {
   font-size: var(--smaller-font-size);
+  position: relative; /* Ensure positioning context */
+  z-index: 1; /* Ensure footer links are above other content */
 }
+
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
