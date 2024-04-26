@@ -77,14 +77,14 @@ img {
 .section-title::after {
   position: absolute;
   content: "";
-  width: 64px;
+  width: auto; /* Change to auto to adjust based on text length */
   height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2rem;
+  left: 50%; /* Position at the center */
+  transform: translateX(-50%); /* Center the underline */
+  bottom: -0.5rem; /* Adjust vertical position as needed */
   background-color: var(--first-color);
 }
+
 
 .section {
   padding-top: 3rem;
@@ -148,6 +148,7 @@ img {
 }
 .nav__logo {
   color: var(--second-color);
+  font-size: 1.5rem;
 }
 .nav__toggle {
   color: var(--second-color);
@@ -430,7 +431,7 @@ img {
     padding-bottom: 3rem;
   }
   .section-title {
-    margin-bottom: var(--mb-6);
+    margin-bottom: 0;
   }
   .section-title::after {
     width: 80px;
