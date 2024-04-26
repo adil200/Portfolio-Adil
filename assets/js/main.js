@@ -20,22 +20,33 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 const sections = document.querySelectorAll('section[id]')
 
-const scrollActive = () =>{
-    const scrollDown = window.scrollY
-
-  sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }                                                    
-    })
-}
+const scrollActive = () => {
+    const scrollDown = window.scrollY;
+  
+    sections.forEach((current) => {
+      const sectionHeight = current.offsetHeight,
+        sectionTop = current.offsetTop - 58,
+        sectionId = current.getAttribute("id"),
+        sectionsClass = document.querySelector(
+          ".nav__menu a[href*=" + sectionId + "]"
+        ),
+        navImg = document.querySelector(".nav__img"); // Select the navigation image
+  
+      if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+        sectionsClass.classList.add("active-link");
+        if (sectionId !== "home") {
+          // If scrolled into a section other than home, show the navigation image
+          navImg.style.display = "inline-block";
+        } else {
+          // If scrolled back to home, hide the navigation image
+          navImg.style.display = "none";
+        }
+      } else {
+        sectionsClass.classList.remove("active-link");
+      }
+    });
+  };
+  
 window.addEventListener('scroll', scrollActive)
 
 const sr = ScrollReveal({
