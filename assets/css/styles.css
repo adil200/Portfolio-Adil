@@ -31,6 +31,75 @@
   }
 }
 
+/* Style for the profile section */
+/* Profile section styles */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  margin: 160px;
+  margin-left: 180px;
+  margin-right: 180px;
+  
+}
+
+.profile-details {
+  overflow: hidden;
+  margin-left: 20px; /* Add margin to the left side */
+}
+
+
+
+.profile-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: flex; /* Add display flex to make the images align side by side */
+  flex-wrap: wrap; /* Allow wrapping to next line if necessary */
+}
+
+.profile-details p img {
+  margin-right: 10px; /* Add margin between the images */
+  margin-bottom: 10px; /* Add margin below each row of images */
+}
+
+.profile-img {
+  float: left;
+  margin-left: 44%;
+  margin-top: 20px;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+}
+
+
+
+
+/* Adjustments for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .profile-section {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .profile-img {
+      margin-bottom: 20px;
+  }
+}
+
+
 .home__subtitle::after {
   content: "|";
   color: var(--first-color); /* Set color to the first color defined */
@@ -366,7 +435,6 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: black;
   color: white;
   text-align: center;
   font-weight: var(--font-semi);
