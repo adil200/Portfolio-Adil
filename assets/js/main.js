@@ -1,3 +1,44 @@
+const typeWriter = (textElement, words, wait = 3000) => {
+  let wordIndex = 0;
+  let textIndex = 0;
+  let typingSpeed = 160; // Increase typing speed
+  let eraseSpeed = 60; // Increase erasing speed
+  let isDeleting = false;
+
+  const type = () => {
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+      if (textIndex > 0) {
+        textElement.textContent = currentWord.substring(0, textIndex - 1) ;
+      }
+      textIndex--;
+    } else {
+      textElement.textContent = currentWord.substring(0, textIndex) ;
+      textIndex++;
+    }
+
+    if (!isDeleting && textIndex === currentWord.length + 1) {
+      isDeleting = true;
+      typingSpeed = eraseSpeed; // Change speed for erasing
+    } else if (isDeleting && textIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typingSpeed = 100; // Reset typing speed
+    }
+
+    setTimeout(type, typingSpeed);
+  };
+
+  type(); 
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.querySelector(".home__subtitle");
+  const words = ["Data Scientist", "Kaggle Expert", "AI Blogger"];
+  typeWriter(textElement, words);
+});
+
+
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)

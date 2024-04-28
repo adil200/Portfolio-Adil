@@ -31,6 +31,18 @@
   }
 }
 
+.home__subtitle::after {
+  content: "|";
+  color: var(--first-color); /* Set color to the first color defined */
+  animation: blink-caret 0.75s step-end infinite; /* Make the cursor blink */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--first-color); }
+}
+
+
 *, ::before, ::after {
   box-sizing: border-box;
 }
