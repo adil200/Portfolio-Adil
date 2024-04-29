@@ -92,6 +92,16 @@
   margin-bottom: 10px; /* Add margin below each row of images */
 }
 
+.image-container {
+  display: flex; /* Use flexbox for easy alignment */
+  flex-wrap: wrap; /* Allow images to wrap to multiple lines */
+  justify-content: space-around; /* Distribute images with gaps */
+}
+
+.image-container img {
+  margin: 0 10px 10px 0;  /* Customize the spacing as needed */
+}
+
 
 .profile-img {
   float: left;
