@@ -132,6 +132,29 @@
   50% { border-color: var(--first-color); }
 }
 
+/* Default styles */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 10px 20px;
+}
+
+/* Media query for smaller devices like phones */
+@media only screen and (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        margin-top: 10px; /* Add some space between buttons */
+    }
+}
+
+
 
 *, ::before, ::after {
   box-sizing: border-box;
