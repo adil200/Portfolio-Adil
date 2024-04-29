@@ -113,6 +113,8 @@
   border-radius: 50%;
   width: 200px; /* Adjust size as needed */
   height: 200px; /* Adjust size as needed */
+  z-index: 1; /* Set a higher z-index */
+  position: relative; /* Ensure proper stacking context */
 }
 
 
