@@ -1,7 +1,7 @@
 const typeWriter = (textElement, words, wait = 3000) => {
   let wordIndex = 0;
   let textIndex = 0;
-  let typingSpeed = 160; // Increase typing speed
+  let typingSpeed = 100; // Increase typing speed
   let eraseSpeed = 60; // Increase erasing speed
   let isDeleting = false;
 
@@ -19,7 +19,7 @@ const typeWriter = (textElement, words, wait = 3000) => {
 
     if (!isDeleting && textIndex === currentWord.length + 1) {
       isDeleting = true;
-      typingSpeed = eraseSpeed; // Change speed for erasing
+      typingSpeed = 100; // Change speed for erasing
     } else if (isDeleting && textIndex === 0) {
       isDeleting = false;
       wordIndex = (wordIndex + 1) % words.length;
