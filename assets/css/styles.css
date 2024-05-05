@@ -120,6 +120,7 @@
 
 
 
+
 /* Adjustments for mobile responsiveness */
 @media screen and (max-width: 768px) {
   .profile-section {
@@ -464,6 +465,28 @@ img {
   color: white;
 }
 
+.work__img:last-child {
+  position: relative;
+  overflow: hidden;
+}
+
+.work__img:last-child center {
+  position: absolute;
+  bottom: 10px; /* Adjust this value to change the vertical position */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--first-color); /* Change this to your desired background color */
+  color: black; /* Change this to your desired text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+
+.work__img:last-child center:hover {
+  color: white; /* Change this to your desired background color on hover */
+}
+
 /* ===== CONTACT =====*/
 .contact__input {
   width: 100%;
@@ -567,6 +590,7 @@ img {
   .contact__container {
     justify-items: center;
   }
+  
 }
 @media screen and (min-width: 768px) {
   body {
