@@ -445,6 +445,29 @@ img {
   border-radius: 0.5rem;
 }
 
+/* ===== For Last Child =====*/
+.work__image {
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.work__image img {
+  transition: 1s;
+}
+.work__image img:hover {
+  transform: scale(1.1);
+}
+
+.work__image:last-child {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+
 /* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
@@ -513,6 +536,7 @@ img {
 .contact__button:hover {
   transform: scale(1.05);
 }
+
 
 /* Ensuring visibility on mobile devices */
 @media (max-width: 768px) {
@@ -691,7 +715,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+  pointer-events: none; /* This line will allow clicks to pass through */
 }
 
 .particle {
