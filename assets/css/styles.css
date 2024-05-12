@@ -510,7 +510,27 @@ img {
   transition: 0.3s;
 }
 
+/* Ensuring visibility on mobile devices */
+@media (max-width: 768px) {
+  .work__img {
+    display: block !important; /* Ensure it is displayed */
+    visibility: visible !important; /* Ensure it is visible */
+    opacity: 1 !important; /* Ensure it is not transparent */
+    position: relative !important; /* Change position to relative on mobile */
+    left: auto !important; /* Remove any horizontal positioning */
+    bottom: auto !important; /* Remove any vertical positioning */
+    transform: none !important; /* Remove transformations */
+    margin: 20px auto; 
+    text-align: center; /* Center the text */
+  }
 
+  .work__img:last-child center {
+    position: relative; /* Override absolute positioning */
+    bottom: auto; /* Ensure it's not positioned off-screen */
+    left: auto;
+    transform: none;
+  }
+}
 
 /* ===== FOOTER =====*/
 .footer {
