@@ -1,3 +1,13 @@
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Optionally, send the form data using Fetch API or another method here
+
+    // Replace the form with the success message
+    var form = document.getElementById('contact-form');
+    form.innerHTML = '<h1>Successfully submitted form. I will reply to you shortly.</h1>';
+});
+
 const typeWriter = (textElement, words, wait = 3000) => {
   let wordIndex = 0;
   let textIndex = 0;
