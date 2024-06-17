@@ -532,10 +532,6 @@ img {
   font-weight: var(--font-semi);
   transition: 0.3s;
 }
-/*adding hover effect, zoom the text*/
-.contact__button:hover {
-  transform: scale(1.05);
-}
 
 
 /* Ensuring visibility on mobile devices */
