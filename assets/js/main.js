@@ -32,6 +32,7 @@ const typeWriter = (textElement, words, wait = 3000) => {
   type(); 
 };
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const textElement = document.querySelector(".home__subtitle");
   const words = ["Data Scientist", "Kaggle Expert", "AI Blogger"];
